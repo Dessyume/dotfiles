@@ -1,0 +1,80 @@
+@import 'theme.css';
+
+* {
+  font-family: 'DroidSansM Nerd Font';
+}
+
+window#waybar {
+  background-color: @crust;
+
+  border-radius: 12px;
+}
+
+tooltip {
+  color: @text;
+  background-color: @crust;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 7.5px 7.5px;
+}
+
+#workspaces,
+#mpris,
+#window,
+#tray,
+#wireplumber,
+#clock {
+  color: @text;
+  background-color: @base;
+
+  padding: 0 8px;
+
+  border-radius: 8px;
+}
+
+#window {
+  background-color: transparent;
+}
+
+#tray menu {
+  background-color: @crust;
+}
+#tray menu menuitem {
+  color: @text;
+
+  transition-property: background-color;
+  transition-duration: 0.25s;
+}
+#tray menu menuitem:hover {
+  background-color: @surface0;
+}
+
+#workspaces {
+  padding: 0;
+}
+#workspaces button {
+  min-width: 0;
+
+  color: @text;
+  background-color: @base;
+
+  padding: 0 10px;
+
+  border-radius: 8px;
+
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+#workspaces button:hover {
+  background-color: @surface0;
+}
+#workspaces button.focused {
+  color: @base;
+  background-color: @maroon;
+}
+#workspaces button.urgent {
+  color: @maroon;
+}

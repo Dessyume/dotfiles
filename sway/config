@@ -1,0 +1,154 @@
+include theme
+
+# Keywords
+# Modifier (defaults to OS key)
+set $mod Mod4
+# Terminal
+set $term kitty
+# Menu
+set $menu (killall -q wofi || wofi --show drun) | xargs swaymsg exec --
+# Clipboard
+set $clipmenu cliphist list | (killall -q wofi || wofi --show dmenu) | cliphist decode | wl-copy
+
+# Monitors
+# Adjust this to your own needs
+output * {
+	mode 1920x1080@100Hz
+}
+
+# Services
+# Idle Management
+exec swayidle -w \
+	timeout 600 'swaymsg "output * dpms off"' \
+	resume 'swaymsg "output * dpms on"'
+# Layout Script
+exec autotiling
+# Background manager
+exec waypaper --random
+# Notifications Daemon
+exec mako
+# Status Bar
+exec waybar
+# Clipboard Manager
+exec wl-paste --watch cliphist store
+# Authorization Agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# On-Screen Display (Server)
+exec swayosd-server
+# Startup Applications
+exec dex -a
+
+# Decoration
+# Title bar
+titlebar_separator disable
+# Gaps
+gaps inner 8
+gaps outer 4
+# Blur
+blur enable
+blur_passes 2
+blur_radius 4
+blur_noise 0.4
+blur_saturation 1
+# Shadows
+shadows enable
+shadow_color $crust
+shadow_blur_radius 6
+shadow_offset 0 1
+# Borders
+default_border pixel 1
+client.focused $maroon $base $text $maroon $maroon
+client.focused_inactive $mantle $base $text $mantle $mantle
+client.unfocused $mantle $base $text $mantle $mantle
+client.urgent $red $base $text $red $red
+corner_radius 6
+# Focus hovered window
+focus_follows_mouse no
+
+# Bindings
+# Drag windows around
+floating_modifier $mod normal
+# Start a terminal
+bindsym $mod+q exec $term
+# Kill focused window
+bindsym $mod+c kill
+# Open the launcher
+bindsym $mod+e exec $menu
+# Open the clipboard history
+bindsym $mod+a exec $clipmenu
+# Open emoji selector
+bindsym $mod+m exec (killall -q wofi || wofi-emoji)
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+# Exit Sway
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Do you really want to exit? This will end your Wayland session.' -B 'Exit' 'swaymsg exit'
+# Take screenshot (Flameshot)
+bindsym Ctrl+Print exec flameshot gui
+# Change current focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+# Move current window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+# Control media
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+# Change volume
+bindsym XF86AudioRaiseVolume exec swayosd-client --output-volume +5 --max-volume 150
+bindsym XF86AudioLowerVolume exec  swayosd-client --output-volume -5 --max-volume 150
+bindsym XF86AudioMute exec swayosd-client --output-volume mute-toggle
+# Change current workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+# Move focused window to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+# Scratchpad
+bindsym $mod+S scratchpad show
+bindsym $mod+Shift+S move scratchpad
+
+# Layout
+# Make the current window fullscreen
+bindsym $mod+f fullscreen
+# Toggle floating status
+bindsym $mod+v floating toggle
+
+# Window rules
+for_window {
+  [app_id="kitty"] resize set width 790px
+  [app_id="nemo"] floating enable
+  [app_id="lutris"] floating enable
+  [app_id="pavucontrol"] floating enable
+  [app_id="authenticator"] floating enable
+  [app_id="waypaper"] floating enable
+  [title="Picture-in-Picture"] floating enable
+  [window_role="pop-up"] floating enable
+  [window_role="bubble"] floating enable
+  [window_role="dialog"] floating enable
+  [window_type="dialog"] floating enable
+}
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
+# Miscellaneous
+include /etc/sway/config.d/*

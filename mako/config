@@ -1,0 +1,11 @@
+font=MesloLGSNerdFont Normal Regular 10
+text-color=#cdd6f4
+background-color=#11111b
+width=320
+height=64
+padding=7,10
+border-size=0
+border-radius=15
+history=0
+default-timeout=7500
+max-icon-size=32

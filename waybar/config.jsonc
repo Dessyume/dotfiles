@@ -1,0 +1,39 @@
+// -*- mode: jsonc -*-
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+  "spacing": 6,
+  "margin": "8 8 0 8",
+
+  "modules-left": ["sway/workspaces", "mpris"],
+  "modules-center": ["sway/window"],
+  "modules-right": ["tray", "wireplumber", "clock"],
+
+  "sway/workspaces": {
+    "window-rewrite": {}
+  },
+  "sway/window": {
+    "max-length": 75
+  },
+  "tray": {
+    "spacing": 4
+  },
+  "clock": {
+    "timezone": "America/Caracas" // Adjust this to your own needs
+  },
+  "wireplumber": {
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "VOL {volume}%",
+    "format-muted": "VOL MUT%",
+    "on-click": "pavucontrol"
+  },
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "player-icons": {
+      "default": " "
+    },
+    "ignored-players": ["firefox"]
+  }
+}
