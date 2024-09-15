@@ -27,6 +27,7 @@ My personal configuration for Arch Linux.
 The color palette used across this repository is [Catppuccin](https://catppuccin.com/). Whenever possible, I included the respective license for each port.
 ### Wallpapers
 - **[Arch Linux](./waypaper/wallpapers/Arch%20Linux.png)**: Custom, based on a design by [1_mmm](https://discord.com/users/602832090949746710).
+- **[Doukutsu Monogatari](./waypaper/wallpapers/Doukutsu%20Monogatari.png)**: Custom, based on artwork from [Cave Story](https://cavestory.org/) (by [Daisuke "Pixel" Amaya](https://studiopixel.jp/)).
 - **[Reading](./waypaper/wallpapers/Reading.png)**: Taken from [orxngc/walls-catppuccin-mocha](https://github.com/orxngc/walls-catppuccin-mocha).
 - **[Sushi](./waypaper/wallpapers/Sushi.jpg)**: Taken from [orxngc/walls-catppuccin-mocha](https://github.com/orxngc/walls-catppuccin-mocha).
 ### Miscellaneous
