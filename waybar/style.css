@@ -49,7 +49,7 @@ tooltip {
   transition-duration: 0.25s;
 }
 #tray menu menuitem:hover {
-  background-color: @surface0;
+  background-color: @base;
 }
 
 #workspaces {
