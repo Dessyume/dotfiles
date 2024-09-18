@@ -20,9 +20,6 @@ My personal configuration files for Arch Linux.
 - Editor config (`~/.config/nvim/*`)
 - Launcher config (`~/.config/wofi/*`)
 
-## Installation
-🚧 **TODO** 🚧
-
 ## Credits
 ### Theme
 The color palette used across this repository is [Catppuccin](https://catppuccin.com/). Whenever possible, I included the respective license for each port that's used.
