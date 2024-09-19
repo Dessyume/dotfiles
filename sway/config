@@ -142,7 +142,7 @@ for_window {
   [app_id="pavucontrol"] floating enable
   [app_id="authenticator"] floating enable
   [app_id="waypaper"] floating enable
-  [title="Picture-in-Picture"] floating enable
+  [title="Picture-in-Picture"] floating enable, sticky enable
   [window_role="pop-up"] floating enable
   [window_role="bubble"] floating enable
   [window_role="dialog"] floating enable
