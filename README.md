@@ -16,7 +16,6 @@ My personal configuration files for Arch Linux.
 - **Launcher**: [Wofi](https://hg.sr.ht/~scoopta/wofi)
 
 ### Missing files (need more work)
-- Shell config (`~/.zshrc`, `~/.zshenv`, `~/.oh-my-zsh/custom/*`)
 - Editor config (`~/.config/nvim/*`)
 - Launcher config (`~/.config/wofi/*`)
 
