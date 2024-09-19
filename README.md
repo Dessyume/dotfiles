@@ -16,8 +16,8 @@ My personal configuration files for Arch Linux.
 - **Launcher**: [Wofi](https://hg.sr.ht/~scoopta/wofi)
 
 ### Missing files (need more work)
-- Editor config (`~/.config/nvim/*`)
-- Launcher config (`~/.config/wofi/*`)
+- Neovim config (`~/.config/nvim/*`)
+- Wofi config (`~/.config/wofi/*`)
 
 ## Credits
 ### Theme
