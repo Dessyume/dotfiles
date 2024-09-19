@@ -20,7 +20,8 @@
     "spacing": 4
   },
   "clock": {
-    "timezone": "America/Caracas" // Adjust this to your own needs
+    "timezone": "America/Caracas", // Adjust this to your own needs
+    "tooltip-format": "{:%Y-%m-%d}"
   },
   "wireplumber": {
     "scroll-step": 5,
