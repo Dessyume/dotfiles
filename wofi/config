@@ -1,0 +1,8 @@
+width=420
+height=400
+
+mode=drun
+columns=1
+prompt=Search
+hide_scroll=true
+insensitive=true

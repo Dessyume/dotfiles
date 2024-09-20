@@ -17,7 +17,6 @@ My personal configuration files for Arch Linux.
 
 ### Missing files (need more work)
 - Neovim config (`~/.config/nvim/*`)
-- Wofi config (`~/.config/wofi/*`)
 
 ## Credits
 ### Theme
@@ -29,3 +28,4 @@ The color palette used across this repository is [Catppuccin](https://catppuccin
 - **[Sushi](./waypaper/wallpapers/Sushi.jpg)**: Taken from [orxngc/walls-catppuccin-mocha](https://github.com/orxngc/walls-catppuccin-mocha).
 ### Miscellaneous
 - Artwork used in fetch was taken from [daily ralsei](https://dailyralsei.straw.page/) (AKA [angle](https://itsalsoangle.straw.page/)).
+- [quantumfate/wofi](https://github.com/quantumfate/wofi) was used as a reference for styling Wofi.
