@@ -10,6 +10,7 @@ autoload -Uz compinit; compinit
 ZSH_THEME="theme"
 plugins=(
   bun
+  deno
   nvm
   archlinux
   zsh-autosuggestions

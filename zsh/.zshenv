@@ -21,8 +21,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Paths
 export BUN_DIR="$HOME/.bun"
+export DENO_DIR="$HOME/.deno"
 export OMZ_DIR="$HOME/.oh-my-zsh"
-export PATH="$BUN_DIR/bin":$PATH
+export PATH="$BUN_DIR/bin":"$DENO_DIR/bin":$PATH
 
 # Miscellaneous
 export EDITOR=nvim 
